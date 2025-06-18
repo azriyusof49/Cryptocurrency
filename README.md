@@ -23,7 +23,7 @@ Cryptocurrency
 1. **Clone the repository:**
    ```
    git clone <repository-url>
-   cd exchange-rate-website
+   cd Cryptocurrency
    ```
 
 2. **Install dependencies:**
