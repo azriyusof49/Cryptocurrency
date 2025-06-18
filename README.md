@@ -43,7 +43,7 @@ Cryptocurrency
 
 5. **Open your browser and navigate to:**
    ```
-   http://localhost:5000
+   http://localhost:3000
    ```
 
 ## Usage Guidelines
