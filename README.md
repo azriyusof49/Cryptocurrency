@@ -5,7 +5,7 @@ This project is a simple web application that integrates with the ExchangeRate A
 ## Project Structure
 
 ```
-exchange-rate-website
+Cryptocurrency
 ├── public
 │   ├── index.html        # HTML structure of the website
 │   └── styles.css       # CSS styles for the website
