@@ -1,0 +1,113 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1f71 0%, #2d3748 100%);
+            min-height: 100vh;
+        }
+
+        .converter-card,
+        .insight-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .crypto-icon {
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+        }
+
+        .input-field,
+        .select-field {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus,
+        .select-field:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 215, 0, 0.5);
+            box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+        }
+
+        .insight-btn {
+            background: linear-gradient(90deg, #f7931a, #ff9500);
+            transition: all 0.3s ease;
+        }
+
+        .insight-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(247, 147, 26, 0.4);
+        }
+
+        .result-btn {
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            transition: all 0.3s ease;
+        }
+
+        .result-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        select option {
+            background-color: #2d3748;
+            color: white;
+        }
+
+        .insight-card {
+            transition: all 0.5s ease;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .insight-card.show {
+            opacity: 1;
+            max-height: 1000px;
+            overflow: visible;
+        }
+
+        .result-display {
+            transition: all 0.3s ease;
+            opacity: 1;
+            max-height: 200px;
+        }
+
+
+        .trend-up {
+            color: #10B981;
+        }
+
+        .trend-down {
+            color: #EF4444;
+        }
+
+        .chart-placeholder {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-line {
+            position: absolute;
+            height: 2px;
+            background: rgba(255, 215, 0, 0.6);
+            bottom: 30%;
+            left: 0;
+            right: 0;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 1.5s ease;
+        }
+
+        .chart-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #f7931a;
+            border-radius: 50%;
+            bottom: calc(30% - 3px);
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }

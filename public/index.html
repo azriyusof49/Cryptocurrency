@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinFXHub - Crypto Currency Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-3xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <div class="flex justify-center items-center mb-4">
+                    <svg class="crypto-icon w-12 h-12 mr-3" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" fill="#F7931A" />
+                        <path
+                            d="M15.265 10.618c.16-1.064-.65-1.637-1.76-2.02l.36-1.44-877-.219-.35 1.407c-.877-.219-1.764-.416-2.628-.613l.35-1.41-.877-.218-.36 1.44c-.723-.165-1.433-.328-2.13-.5v.008l-1.21-.302-.233.934s.65.15.637.159c.355.089.42.323.41.51l-.409 1.638c.024.006.056.015.09.029l-.092-.023-573 2.296c-.063.156-.222.39-.582.3.013.019-.637-.159-.637-.159l-.437 1.007 1.142.285c.212.053.42.109.626.162l-.363 1.458.877.218.36-1.443c.29.079.57.151.845.22l-.358 1.43.877.218.363-1.456c1.809.342 3.168.204 3.739-1.432.46-1.321-.023-2.084-.97-2.583.69-.16 1.21-.614 1.349-1.554zm-2.414 3.39c-.327 1.32-2.537.607-3.257.428l.581-2.329c.72.18 3.025.536 2.676 1.9zm.327-3.425c-.299 1.196-2.137.588-2.732.439l.527-2.115c.595.149 2.51.425 2.205 1.676z"
+                            fill="white" />
+                    </svg>
+                    <h1 class="text-4xl font-bold text-white">CoinFXHub</h1>
+                </div>
+                <p class="text-blue-100 text-lg">Instant Cryptocurrency Conversion Calculator</p>
+            </div>
+
+            <!-- Converter Card -->
+            <div class="converter-card rounded-2xl p-8 shadow-2xl mb-6">
+              <form id="exchange-rate-form">
+                <div class="space-y-6">
+                    <!-- Cryptocurrency Dropdown -->
+                    <div>
+                        <label class="block text-blue-100 mb-2 font-medium">Select Cryptocurrency</label>
+                        <div class="relative">
+                            <select id="target-crypto"
+                                class="select-field w-full px-5 py-4 rounded-xl text-white text-lg focus:outline-none appearance-none">
+                                <option value="BTC">Bitcoin (BTC)</option>
+                                <option value="ETH">Ethereum (ETH)</option>
+                                <option value="BNB">Binance Coin (BNB)</option>
+                                <option value="ADA">Cardano (ADA)</option>
+                                <option value="SOL">Solana (SOL)</option>
+                                <option value="XRP">Ripple (XRP)</option>
+                                <option value="DOT">Polkadot (DOT)</option>
+                                <option value="DOGE">Dogecoin (DOGE)</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-5 pointer-events-none">
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Currency Dropdown -->
+                    <div>
+                        <label class="block text-blue-100 mb-2 font-medium">Convert To</label>
+                        <div class="relative">
+                            <select id="target-currency"
+                                class="select-field w-full px-5 py-4 rounded-xl text-white text-lg focus:outline-none appearance-none">
+                                <option value="USD">US Dollar (USD)</option>
+                                <option value="EUR">Euro (EUR)</option>
+                                <option value="GBP">British Pound (GBP)</option>
+                                <option value="JPY">Japanese Yen (JPY)</option>
+                                <option value="AUD">Australian Dollar (AUD)</option>
+                                <option value="CAD">Canadian Dollar (CAD)</option>
+                                <option value="CHF">Swiss Franc (CHF)</option>
+                                <option value="CNY">Chinese Yuan (CNY)</option>
+                                <option value="MYR">Malaysian Ringgit (MYR)</option>
+                                <option value="SGD">Singapore Dollar (SGD)</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-5 pointer-events-none">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Display (Hidden by default) -->
+                    <div id="result" class="mt-6 text-center text-blue-200 text-lg"></div>
+
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <button id="insightBtn"
+                            class="insight-btn text-white font-semibold py-4 px-6 rounded-xl text-lg">
+                            Get Insight
+                        </button>
+                        <button id="submit" class="result-btn text-white font-semibold py-4 px-6 rounded-xl text-lg">
+                            Get Result
+                        </button>
+                    </div>
+
+                    <!-- Exchange Rate Info -->
+                    <div class="mt-6 text-center text-blue-200 text-sm">
+                        <p id="lastUpdated">Exchange rates last updated: <span id="updateTime">-</span></p>
+                    </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Insight Card (Hidden by default) -->
+            <div id="result_insight" class="mt-6 text-center text-blue-200 text-lg"></div>
+
+            <!-- Footer -->
+            <div class="mt-8 text-center text-blue-200 text-sm">
+                <p>© 2023 CoinFXHub. All rights reserved.</p>
+                <p class="mt-1">Rates are for informational purposes only.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
