@@ -22,7 +22,7 @@ Cryptocurrency
 
 1. **Clone the repository:**
    ```
-   git clone <repository-url>
+   git clone https://github.com/azriyusof49/Cryptocurrency.git
    cd Cryptocurrency
    ```
 
