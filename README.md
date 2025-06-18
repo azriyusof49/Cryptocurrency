@@ -31,9 +31,9 @@ Cryptocurrency
    npm install
    ```
 
-3. **Create a `.env` file in the root directory and add your ExchangeRate API key:**
+3. **Create a `.env` file in the root directory and add your COHERE API key:**
    ```
-   EXCHANGE_RATE_API_KEY=your_api_key_here
+   COHERE_API_KEY=your_api_key_here
    ```
 
 4. **Start the server:**
